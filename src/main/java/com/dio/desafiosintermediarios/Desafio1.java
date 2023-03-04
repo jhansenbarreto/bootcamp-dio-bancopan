@@ -1,5 +1,6 @@
 package com.dio.desafiosintermediarios;
 
+import java.util.HashMap;
 import java.util.Scanner;
 
 /**
@@ -39,44 +40,20 @@ public class Desafio1 {
         AN2 = sc.nextLine().toLowerCase();
         AN3 = sc.nextLine().toLowerCase();
 
-        if (AN1.equals("vertebrado")) {
+        HashMap<String, String> animais = new HashMap<>();
 
-            if (AN2.equals("ave")) {
+        animais.put("vertebrado ave carnivoro", "aguia");
+        animais.put("vertebrado ave onivoro", "pomba");
 
-                if (AN3.equals("carnivoro")) {
-                    System.out.println("aguia");
+        animais.put("vertebrado mamifero onivoro", "homem");
+        animais.put("vertebrado mamifero herbivoro", "vaca");
 
-                } else if (AN3.equals("onivoro")) {
-                    System.out.println("pomba");
-                }
-            } else if (AN2.equals("mamifero")) {
+        animais.put("invertebrado inseto hematofago", "pulga");
+        animais.put("invertebrado inseto herbivoro", "lagarta");
 
-                if (AN3.equals("onivoro")) {
-                    System.out.println("homem");
+        animais.put("invertebrado anelideo hematofago", "sanguessuga");
+        animais.put("invertebrado anelideo onivoro", "minhoca");
 
-                } else if (AN3.equals("herbivoro")) {
-                    System.out.println("vaca");
-                }
-            }
-        } else if (AN1.equals("invertebrado")) {
-
-            if (AN2.equals("inseto")) {
-
-                if (AN3.equals("hematofago")) {
-                    System.out.println("pulga");
-
-                } else if (AN3.equals("herbivoro")) {
-                    System.out.println("lagarta");
-                }
-            } else if (AN2.equals("anelideo")) {
-
-                if (AN3.equals("hematofago")) {
-                    System.out.println("sanguessuga");
-
-                } else if (AN3.equals("onivoro")) {
-                    System.out.println("minhoca");
-                }
-            }
-        }
+        System.out.println(animais.get(AN1 + " " + AN2 + " " + AN3));
     }
 }
