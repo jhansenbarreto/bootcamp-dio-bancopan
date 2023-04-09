@@ -6,7 +6,6 @@ import com.academia.dio.domain.model.AvaliacaoFisica;
 import com.academia.dio.domain.repository.AvaliacaoFisicaRepository;
 import com.academia.dio.domain.repository.MatriculaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
